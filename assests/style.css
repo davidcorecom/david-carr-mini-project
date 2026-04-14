@@ -1,3 +1,19 @@
 body {
-    background-color: blue;
+    background-color: rgb(131, 131, 131);
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.cell {
+    height: 200px;
+    width: 80px;
+    background-color: #7535a0;
+    display: inline-block;
 }
