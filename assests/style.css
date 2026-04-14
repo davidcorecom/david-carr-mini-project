@@ -1,19 +1,46 @@
 body {
-    background-color: rgb(131, 131, 131);
+    background-color: rgb(241, 22, 223);
+    animation: bgChange 2s infinite;
+}
+
+@keyframes bgChange {
+    0% {background-color: #8005d3;}
+    25% {background-color: #1803db;}
+    50% {background-color: #422ef5;}
+    100% {background-color: #a732eb;}
+}
+
+#background {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("images/background.png");
 }
 
 .grid {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;  /* items move to next row */
     height: 100vh;
     margin: 0;
+    gap: 5px
 
 }
 
 .cell {
+    background-color: #ec1fca;
+    display: flex;
+    width: 200px;
     height: 200px;
-    width: 80px;
-    background-color: #7535a0;
-    display: inline-block;
+    border: 5px solid rgb(57, 0, 95);
+    box-sizing: border-box;
 }
+
+.cell:nth-child(2n) {
+    background-color: rgb(25, 0, 255);
+}
+
+
