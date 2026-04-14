@@ -1,6 +1,12 @@
 body {
     background-color: rgb(241, 22, 223);
-    animation: bgChange 2s infinite;
+    animation: bgChange 3s infinite;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(20, 0, 34)
 }
 
 @keyframes bgChange {
@@ -14,7 +20,6 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    margin: 0;
     background-image: url("images/background.png");
 }
 
@@ -31,16 +36,16 @@ body {
 }
 
 .cell {
-    background-color: #ec1fca;
+    background-color: #ffffff;
     display: flex;
-    width: 200px;
-    height: 200px;
-    border: 5px solid rgb(57, 0, 95);
+    width: 180px;
+    height: 180px;
+    border: 5px solid rgb(109, 0, 182);
     box-sizing: border-box;
 }
 
 .cell:nth-child(2n) {
-    background-color: rgb(25, 0, 255);
+    border: 5px solid rgb(255, 0, 170);
 }
 
 
