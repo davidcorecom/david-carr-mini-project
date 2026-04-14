@@ -14,11 +14,6 @@ h2 {
     margin-top: 50px;
 }
 
-.player-two {
-    display: flex;
-    align-items: flex-end;
-}
-
 @keyframes bgChange {
     0% {background-color: #8005d3;}
     25% {background-color: #1803db;}
@@ -36,6 +31,7 @@ h2 {
 }
 
 .grid {
+    display: grid;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +42,12 @@ h2 {
     gap: 5px
 }
 
+.is-hidden {
+    display: none;
+}
+
 .cell {
+    display: grid;
     background-color: #ffffff;
     display: flex;
     width: 180px;
@@ -56,6 +57,7 @@ h2 {
 }
 
 .cell:nth-child(2n) {
+    display: grid;
     border: 5px solid rgb(255, 0, 170);
 }
 
@@ -71,7 +73,7 @@ h2 {
     margin-top: 10px;
 }
 
-#score {
+#welcome {
     display: flex;
     font-family:'Courier New', Courier, monospace;
     font-size: 30px;
@@ -81,4 +83,45 @@ h2 {
 
 #weather {
     color: #ffffff;
+}
+
+#card-players {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 50px;
+}
+
+.player {
+    display: block;
+    display: flex;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+}
+.player-two {
+    display: block;
+    display: flex;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.score {
+    color:#ffffff;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.start-game-btn {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #f119cd;
+    height: 20px;
+    padding: 0.5em 1em;
+    margin-top: 50px;
 }

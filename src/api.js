@@ -5,11 +5,9 @@ export async function getForecast(lat, lon) {
             throw new Error(`HTTP error: ${response.status}`)
         }
         const data = await response.json();
-        console.log(`The weather in location is:`, data.current_weather);
+        return (`The weather in location is:`, data.current_weather);
 
     } catch (error) {
         console.error("Failed to fetch forecast:", error);
     }
 }
-
-getForecast(51.5029, 0.0222);

@@ -1,10 +1,7 @@
-import { getForecast } from "/api.js"
+import { getForecast } from "..src/api.js"
 
-const weather = document.createElement("weather")
-
-async function loadWeather() {
-    const data = await getForecast()
-    weather.textContent = data.current_weather
-}
-
-loadWeather()
+(async () => {
+const weather = document.getElementById("weather")
+const data = await getForecast(51.5029, 0.0222)
+weather.textContent = `${data.current_weather}`
+})()
