@@ -1,4 +1,4 @@
-export async function getForecast(lat, lon) {
+async function getForecast(lat, lon) {
     try {
         const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`)
         if (!response.ok) {
@@ -11,3 +11,9 @@ export async function getForecast(lat, lon) {
         console.error("Failed to fetch forecast:", error);
     }
 }
+
+(async () => {
+const weather = document.getElementById("weather")
+const data = await getForecast(51.5029, 0.0222)
+weather.textContent = `${data.current_weather}`
+})()

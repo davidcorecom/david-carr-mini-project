@@ -6,7 +6,9 @@ body {
 h1 {
     text-align: center;
     font-family:'Courier New', Courier, monospace;
-    color:rgb(20, 0, 34)
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+    color:rgb(228, 191, 255);
 }
 
 h2 {
@@ -25,7 +27,7 @@ h2 {
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-image: url("images/background.png");
+    background-image: url("../assets/images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -111,7 +113,7 @@ h2 {
     font-family:'Courier New', Courier, monospace;
 }
 
-.start-game-btn {
+#start-game-btn {
     display: block;
     display: flex;
     align-items: center;

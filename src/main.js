@@ -1,7 +1,11 @@
-import { getForecast } from "..src/api.js"
+const startBtn = document.getElementById("start-game-btn")
 
-(async () => {
-const weather = document.getElementById("weather")
-const data = await getForecast(51.5029, 0.0222)
-weather.textContent = `${data.current_weather}`
-})()
+startBtn.addEventListener("click", () => {
+    startBtn.remove()
+    document.querySelectorAll(".is-hidden").forEach((element) => {
+        element.classList.remove("is-hidden")
+    })
+});
+
+
+
