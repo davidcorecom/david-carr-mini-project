@@ -9,6 +9,16 @@ h1 {
     color:rgb(20, 0, 34)
 }
 
+h2 {
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+.player-two {
+    display: flex;
+    align-items: flex-end;
+}
+
 @keyframes bgChange {
     0% {background-color: #8005d3;}
     25% {background-color: #1803db;}
@@ -21,6 +31,8 @@ h1 {
     justify-content: center;
     height: 100vh;
     background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .grid {
@@ -32,7 +44,6 @@ h1 {
     height: 100vh;
     margin: 0;
     gap: 5px
-
 }
 
 .cell {
@@ -48,4 +59,26 @@ h1 {
     border: 5px solid rgb(255, 0, 170);
 }
 
+#reset-button {
+    display: flex;
+    justify-content: flex-end;
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #f119cd;
+    height: 20px;
+    margin-top: 10px;
+}
 
+#score {
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 30px;
+    height: 20px;
+    color:#f119cd
+}
+
+#weather {
+    color: #ffffff;
+}
