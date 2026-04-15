@@ -58,11 +58,6 @@ h2 {
     box-sizing: border-box;
 }
 
-.cell:nth-child(2n) {
-    display: grid;
-    border: 5px solid rgb(255, 0, 170);
-}
-
 #reset-button {
     display: flex;
     justify-content: flex-end;
