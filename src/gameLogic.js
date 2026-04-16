@@ -1,8 +1,8 @@
 const cell = document.getElementsByClassName("cell");
 const cells = Array.from(document.getElementsByClassName("cell"))
 const resetBtn = document.getElementById("reset-button")
-const ScoreOne = document.getElementById("score-one")
-const ScoreTwo = document.getElementById("score-two")
+const scoreOne = document.getElementById("score-one")
+const scoreTwo = document.getElementById("score-two")
 
 const images = {
     X: "../assets/images/cross.png",
@@ -72,10 +72,10 @@ if (checkWin(board, currentPlayer)) {
     
     if (currentPlayer === "X") {
         scoreX++
-        ScoreOne.textContent = scoreX
+        scoreOne.textContent = scoreX
     } else {
         scoreO++
-        scoreTwo.textContent = ScoreO
+        scoreTwo.textContent = scoreO
     }
     alert(currentPlayer + " wins!")
     return
@@ -85,4 +85,4 @@ getNextPlayer()
 });
 });
 
-resetBtn.addEventListener("click ", resetGame)
+resetBtn.addEventListener("click", resetGame)
