@@ -7,6 +7,7 @@ const images = {
 }
 
 let currentPlayer = "X"
+let board = ["","","","","","","","",""]
 
 const getNextPlayer = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X"
@@ -15,10 +16,11 @@ const getNextPlayer = () => {
 
 cells.forEach((cell, index) => {
     cell.addEventListener("click", () => {
-    if (cell.querySelector("img")) {
+    if (board[index] !== "") {
     alert("You cannot click on the same square!")
     return
     }
+board[index] = currentPlayer
 const img = document.createElement("img")
 img.src = images[currentPlayer]
 img.alt = currentPlayer
