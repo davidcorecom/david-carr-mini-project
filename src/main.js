@@ -1,5 +1,7 @@
 const startBtn = document.getElementById("start-game-btn");
 const cell = document.getElementsByClassName('cell');
+const resetBtn = document.getElementById("reset-button")
+const cells = Array.from(document.getElementsByClassName("cell"))
 
 startBtn.addEventListener("click", () => {
     startBtn.remove();
@@ -8,7 +10,6 @@ startBtn.addEventListener("click", () => {
     })
 });
 
-const cells = Array.from(document.getElementsByClassName("cell"))
 cells.forEach((cell, index) => {
 cell.addEventListener("click", () => {
 const img = document.createElement("img")
@@ -18,8 +19,14 @@ cell.computedStyleMap.backgroundSize = "contain";
 cell.computedStyleMap.backgroundRepeat = "no-repeat";
 cell.computedStyleMap.backgroundPosition = "center";
 cell.appendChild(img);
-})
-})
+});
+});
+
+resetBtn.addEventListener("click ", () => {
+    cells.forEach((cell) => {
+        cell.remove("img")
+    });
+});
 
 
 // const crossClick = document.
