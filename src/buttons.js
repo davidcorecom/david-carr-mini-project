@@ -1,5 +1,5 @@
 const startBtn = document.getElementById("start-game-btn");
-const resetBtn = document.getElementById("reset-button")
+
 
 startBtn.addEventListener("click", () => {
     startBtn.remove();
@@ -8,8 +8,4 @@ startBtn.addEventListener("click", () => {
     })
 });
 
-resetBtn.addEventListener("click ", () => {
-    cells.forEach((cell) => {
-        cell.remove("img")
-    });
-});
+

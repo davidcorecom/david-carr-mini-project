@@ -1,5 +1,6 @@
 const cell = document.getElementsByClassName('cell');
 const cells = Array.from(document.getElementsByClassName("cell"))
+const resetBtn = document.getElementById("reset-button")
 const images = {
     X: "../assets/images/cross.png",
     O: "../assets/images/nought.png"
@@ -38,6 +39,15 @@ const getNextPlayer = () => {
     console.log("Current player is now:", currentPlayer)
     }
 
+
+const resetGame = () => {
+board = ["","","","","","","","",""]
+currentPlayer = "X"
+cells.forEach(cell => {
+    cell.innerHTML = ""
+})
+}
+
 cells.forEach((cell, index) => {
     cell.addEventListener("click", () => {
     if (board[index] !== "") {
@@ -61,3 +71,5 @@ if (checkWin(board, currentPlayer)) {
 getNextPlayer()
 });
 });
+
+resetBtn.addEventListener("click ", resetGame)
