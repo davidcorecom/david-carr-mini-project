@@ -1,6 +1,7 @@
+import { checkWin } from "./winChecker.js"
+
 const cell = document.getElementsByClassName('cell');
 const cells = Array.from(document.getElementsByClassName("cell"))
-
 const images = {
     X: "../assets/images/cross.png",
     O: "../assets/images/nought.png"
@@ -8,6 +9,7 @@ const images = {
 
 let currentPlayer = "X"
 let board = ["","","","","","","","",""]
+
 
 const getNextPlayer = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X"
@@ -29,5 +31,6 @@ cell.style.backgroundRepeat = "no-repeat";
 cell.style.backgroundPosition = "center";
 cell.appendChild(img);
 getNextPlayer()
+checkWin()
 });
 });
