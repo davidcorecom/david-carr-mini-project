@@ -1,5 +1,3 @@
-import { checkWin } from "./winChecker.js"
-
 const cell = document.getElementsByClassName('cell');
 const cells = Array.from(document.getElementsByClassName("cell"))
 const images = {
@@ -10,6 +8,30 @@ const images = {
 let currentPlayer = "X"
 let board = ["","","","","","","","",""]
 
+const checkWin = (board, player) => {
+    const winLine = [
+    [0,1,2],[3,4,5],[6,7,8], //winning rows
+    [0,3,6],[1,4,7],[2,5,8], //winning columns
+    [0,4,8],[2,4,6] //winning diagonals
+]
+    for (let i = 0; i < winLine.length; i++) {
+        console.log(winLine[i])
+
+        const line = winLine[i]
+        const first = line[0]
+        const second = line[1]
+        const third = line[2]
+
+    if (
+        board[first] === player &&
+        board[second] === player &&
+        board[third] === player
+    ) {
+        return true
+    }
+    }
+    return false
+}
 
 const getNextPlayer = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X"
@@ -30,7 +52,12 @@ cell.style.backgroundSize = "contain";
 cell.style.backgroundRepeat = "no-repeat";
 cell.style.backgroundPosition = "center";
 cell.appendChild(img);
+
+if (checkWin(board, currentPlayer)) {
+    alert(currentPlayer + " wins!")
+    return
+}
+
 getNextPlayer()
-checkWin()
 });
 });

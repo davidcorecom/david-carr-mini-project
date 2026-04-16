@@ -13,7 +13,3 @@ resetBtn.addEventListener("click ", () => {
         cell.remove("img")
     });
 });
-
-
-// "../assets/images/cross.png"
-// "../assets/images/nought.png"
