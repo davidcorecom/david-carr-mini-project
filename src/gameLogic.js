@@ -1,6 +1,9 @@
-const cell = document.getElementsByClassName('cell');
+const cell = document.getElementsByClassName("cell");
 const cells = Array.from(document.getElementsByClassName("cell"))
 const resetBtn = document.getElementById("reset-button")
+const ScoreOne = document.getElementById("score-one")
+const ScoreTwo = document.getElementById("score-two")
+
 const images = {
     X: "../assets/images/cross.png",
     O: "../assets/images/nought.png"
@@ -8,6 +11,8 @@ const images = {
 
 let currentPlayer = "X"
 let board = ["","","","","","","","",""]
+let scoreX = 0
+let scoreO = 0
 
 const checkWin = (board, player) => {
     const winLine = [
@@ -64,6 +69,14 @@ cell.style.backgroundPosition = "center";
 cell.appendChild(img);
 
 if (checkWin(board, currentPlayer)) {
+    
+    if (currentPlayer === "X") {
+        scoreX++
+        ScoreOne.textContent = scoreX
+    } else {
+        scoreO++
+        scoreTwo.textContent = ScoreO
+    }
     alert(currentPlayer + " wins!")
     return
 }

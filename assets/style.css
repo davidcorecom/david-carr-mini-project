@@ -106,6 +106,8 @@ h2 {
 .score {
     color:#ffffff;
     font-family:'Courier New', Courier, monospace;
+    font-size: 32;
+    font-weight: 4;
 }
 
 #start-game-btn {
@@ -121,4 +123,18 @@ h2 {
     height: 20px;
     padding: 0.5em 1em;
     margin-top: 50px;
+}
+
+#score-one {
+    color:#ffffff;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 32;
+    font-weight: 4;
+}
+
+#score-two {
+    color:#ffffff;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 32;
+    font-weight: 4;
 }
