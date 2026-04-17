@@ -80,7 +80,6 @@ cell.style.backgroundPosition = "center";
 cell.appendChild(img);
 
 if (checkWin(board, currentPlayer)) {
-    
     if (currentPlayer === "X") {
         scoreX++
         scoreOne.textContent = scoreX
@@ -106,6 +105,7 @@ const trophy = () => {
     const img = document.createElement("img")
     img.src = "../assets/images/trophy.png"
     img.id = "trophy"
+    img.alt = "trophy photo"
     img.style.border = "thick solid #fa26d7"
     document.body.appendChild(img)
 
