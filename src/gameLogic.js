@@ -95,14 +95,15 @@ getNextPlayer()
 });
 
 const trophy = () => {
-    const trophy = document.getElementById("trophy")
-    const game = document.createElement("img")
-    game.src = "../assets/images/trophy.png"
-    game.appendChild(img)
+    const img = document.createElement("img")
+    img.src = "../assets/images/trophy.png"
+    img.id = "trophy"
+    img.style.border = "thick solid #fa26d7"
+    document.body.appendChild(img)
 
     setTimeout(() => {
-    trophy.remove()
-    }, 5000);
+    img.remove()
+    }, 3000);
 }
 
 resetBtn.addEventListener("click", resetGame)

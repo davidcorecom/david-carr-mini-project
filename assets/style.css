@@ -138,3 +138,12 @@ h2 {
     font-size: 32;
     font-weight: 4;
 }
+
+#trophy {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-56%, -52%);
+    width: 550px;
+}
+
