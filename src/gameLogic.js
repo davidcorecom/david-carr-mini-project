@@ -14,6 +14,10 @@ let board = ["","","","","","","","",""]
 let scoreX = 0
 let scoreO = 0
 
+// The game stores all possible winning lines
+// Uses a for loop to iterate one line at a time
+// It then checks the board to see if it matches
+// It will continue looping to the next line if no match
 const checkWin = (board, player) => {
     const winLine = [
     [0,1,2],[3,4,5],[6,7,8], //winning rows
@@ -39,12 +43,14 @@ const checkWin = (board, player) => {
     return false
 }
 
+// Function that checks current player
+// If current player is X it will switch to O, otherwise will switch to X
 const getNextPlayer = () => {
     currentPlayer = currentPlayer === "X" ? "O" : "X"
     console.log("Current player is now:", currentPlayer)
     }
 
-
+// Resets the board, current player and board tiles
 const resetGame = () => {
 board = ["","","","","","","","",""]
 currentPlayer = "X"
