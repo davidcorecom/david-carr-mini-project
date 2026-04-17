@@ -78,7 +78,8 @@ if (checkWin(board, currentPlayer)) {
         scoreTwo.textContent = scoreO
     }
     alert(currentPlayer + " wins!")
-    return
+    resetGame()
+    return 
 }
 
 getNextPlayer()
