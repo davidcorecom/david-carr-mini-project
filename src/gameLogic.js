@@ -4,6 +4,7 @@ const resetBtn = document.getElementById("reset-button")
 const scoreOne = document.getElementById("score-one")
 const scoreTwo = document.getElementById("score-two")
 
+
 const images = {
     X: "../assets/images/cross.png",
     O: "../assets/images/nought.png"
@@ -84,6 +85,7 @@ if (checkWin(board, currentPlayer)) {
         scoreTwo.textContent = scoreO
     }
     alert(currentPlayer + " wins!")
+    trophy()
     resetGame()
     return 
 }
@@ -91,5 +93,16 @@ if (checkWin(board, currentPlayer)) {
 getNextPlayer()
 });
 });
+
+const trophy = () => {
+    const trophy = document.getElementById("trophy")
+    const game = document.createElement("img")
+    game.src = "../assets/images/trophy.png"
+    game.appendChild(img)
+
+    setTimeout(() => {
+    trophy.remove()
+    }, 5000);
+}
 
 resetBtn.addEventListener("click", resetGame)
