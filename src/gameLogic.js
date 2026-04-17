@@ -1,4 +1,3 @@
-const cell = document.getElementsByClassName("cell");
 const cells = Array.from(document.getElementsByClassName("cell"))
 const resetBtn = document.getElementById("reset-button")
 const scoreOne = document.getElementById("score-one")
