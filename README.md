@@ -17,6 +17,8 @@ If all squares are filled its a draw.
 The game needs to reset when the player wins the game or if its a draw.
 A score counter can increment by 1 when a player wins and stays as 0 when its a draw.
 
+I made a change.
+
 
 
 commit more changes for me
